@@ -1,12 +1,10 @@
-# main.py
-
 import cv2
 import torch
 import numpy as np
-from deep_sort import nn_matching
+from deep_sort.deep_sort import nn_matching
 from deep_sort.deep_sort.detection import Detection
 from deep_sort.deep_sort.tracker import Tracker
-from deep_sort import generate_detections as gdet
+from deep_sort.tools import generate_detections as gdet
 from PIL import Image
 import torchvision.transforms as transforms
 import torchvision.models as models
@@ -143,9 +141,9 @@ def main():
     args = parser.parse_args()
 
     # Specify the paths to your model weights here
-    yolo_weights = r"C:\Users\BQ Team 4\Documents\child\yolov5s.pt"
-    classifier_weights = r"C:\Users\BQ Team 4\Documents\child\classifier_weights.pt"
-    deepsort_weights = r"C:\Users\BQ Team 4\Documents\child\mars-small128.pb"
+    yolo_weights = "yolov5s.pt"
+    classifier_weights = "classifier_weights.pt"
+    deepsort_weights = "mars-small128.pb"
 
     pipeline = PersonDetectionTrackingPipeline(
         yolo_weights,
