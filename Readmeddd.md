@@ -1,0 +1,1 @@
+wget "https://github.com/nwojke/deep_sort/raw/master/deep_sort/deep/checkpoint/mars-small128.pb" -O "mars-small128.pb"

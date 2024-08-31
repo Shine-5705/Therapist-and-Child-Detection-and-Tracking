@@ -1,0 +1,9 @@
+pip install torch torchvision torchaudio
+pip install opencv-python
+git clone https://github.com/ultralytics/yolov5
+cd yolov5
+pip install -r requirements.txt
+git clone https://github.com/nwojke/deep_sort
+cd deep_sort
+pip install .   
+pip install numpy Pillow
